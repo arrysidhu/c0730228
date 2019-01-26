@@ -48,6 +48,7 @@ namespace c0730228
 
             NextVillage = CurrentVillage.NextVillage;
         }
+
     }
 
     class Village
