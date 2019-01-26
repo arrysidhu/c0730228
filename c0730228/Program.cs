@@ -8,25 +8,27 @@ namespace c0730228
 {
     class Program
     {
-        static void Main(String[]args)
+        static void Main(string[] args)
         {
-
         }
     }
-    class countryside
+    class Countrysider
     {
+
         Village Alst;
         Village Maeland;
         Village Schenig;
 
         public void InitializeMap()
         {
-            Village Alst = new Village();
+
+
+            Alst = new Village();
             Alst.VillageName = "Alst";
-            Village Maeland = new Village();
+            Maeland = new Village();
             Maeland.VillageName = "Maeland";
             Maeland.isAstrildeHere = true;
-            Village Schenig = new Village();
+            Schenig = new Village();
             Schenig.VillageName = "Schenig";
 
             Alst.NextVillage = Maeland;
@@ -34,22 +36,28 @@ namespace c0730228
             Schenig.NextVillage = Alst;
         }
 
-
-        public void WalkAround()
+        public void FindAstrilde()
         {
-             Village InitialVillage = this.Maeland;
+
+            Village CurrentVillage = this.Maeland;
+            Village NextVillage;
+            if (CurrentVillage.isAstrildeHere)
+            {
+                Console.WriteLine("Hugi Found Astrilde!!! Celebration!! XoXo!!");
+            }
+
+            NextVillage = CurrentVillage.NextVillage;
         }
+    }
+
+    class Village
+    {
+        public Village PreviousVillage;
+        public Village NextVillage;
+        public String VillageName;
+        public bool isAstrildeHere = false;
+        public Village() { }
+
 
     }
-} 
-        class Village
-        
-        {
-      public  Village PreviousVillage;
-      public  Village NextVillage;
-      public String VillageName;
-      public  bool isAstrildeHere = false;
-        public Village() { }
-        }
-  
-
+}
