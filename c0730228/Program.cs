@@ -8,8 +8,18 @@ namespace c0730228
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(String[]args)
         {
+
         }
     }
-}
+    
+        class Node 
+        
+        {
+        Node PreviousNode;
+        Node NextNode;
+
+        }
+    }
+
