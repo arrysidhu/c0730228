@@ -14,12 +14,14 @@ namespace c0730228
         }
     }
     
-        class Node 
+        class Village
         
         {
-        Node PreviousNode;
-        Node NextNode;
-
+        Village PreviousVillage;
+        Village NextVillage;
+        String VillageName;
+        bool isAstrildeHere = false;
+        public Village() { }
         }
     }
 
